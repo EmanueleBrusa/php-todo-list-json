@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             todoList: [],
-            todoItem: '',
+            todoItem: null,
             apiUrl: 'server.php',
         }
     },
@@ -33,14 +33,20 @@ createApp({
             }
         },
         deleteItem(index) {
-
             const remove = new FormData();
             remove.append('remove', index);
 
             axios.post(this.apiUrl, remove).then((result) => {
                 this.todoList = result.data
             })
+        },
+        changeStatus(index) {
+            const changeStatus = new FormData();
+            changeStatus.append('change', index);
 
+            axios.post(this.apiUrl, changeStatus).then((result) => {
+                this.todoList = result.data
+            })
         }
     },
 }).mount('#app');

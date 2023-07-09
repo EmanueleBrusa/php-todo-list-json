@@ -17,7 +17,7 @@
                         <h1 class="display-1 text-muted">Todo List</h1>
                         <ul class="list-group list-group-flush border border-1 rounded">
                             <li v-for="(todoItem, index) in todoList" :key="index" class="list-group-item">
-                                {{ todoItem.text }}
+                                <span @click="changeStatus(index)" :class="todoItem.done ? '' : 'text-decoration-line-through cursor-pointer'">{{ todoItem.text }}</span>
                                 <button @click="deleteItem(index)" class="btn btn-danger btn-sm float-end"><i class="fa-solid fa-trash" style="color: #fff;"></i></button>
                             </li>
                         </ul>

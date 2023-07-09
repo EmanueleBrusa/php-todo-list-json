@@ -1,9 +1,5 @@
 [
     {
-        "text": "HTML",
-        "done": true
-    },
-    {
         "text": "CSS",
         "done": true
     },
@@ -22,5 +18,29 @@
     {
         "text": "Laravel",
         "done": true
+    },
+    {
+        "text": "HTML",
+        "done": true
+    },
+    {
+        "text": "Fare esercizio di venerd\u00ec",
+        "done": true
+    },
+    {
+        "text": "aprire una nuova repo",
+        "done": "true"
+    },
+    {
+        "text": "lezione",
+        "done": "true"
+    },
+    {
+        "text": "pushare",
+        "done": "true"
+    },
+    {
+        "text": "pranzo",
+        "done": "true"
     }
 ]

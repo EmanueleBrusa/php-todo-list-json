@@ -15,6 +15,12 @@ if(isset($_POST['remove'])){
     file_put_contents('data/to_do.json', $arrayEncode);
 }
 
+if(isset($_POST['change'])){
+    $array[$_POST['change']]['done'] = !$array[$_POST['change']]['done'];
+    $arrayEncode = json_encode($array);
+    file_put_contents('data/to_do.json', $arrayEncode);
+}
+
 header('Content-Type: application/json');
 echo json_encode($array);
 ?>
