@@ -21,6 +21,14 @@
     },
     {
         "text": "Laravel",
-        "done": false
+        "done": true
+    },
+    {
+        "text": "cacca",
+        "done": "true"
+    },
+    {
+        "text": "esercizio ",
+        "done": "true"
     }
 ]
