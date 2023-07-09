@@ -9,6 +9,12 @@ if(isset($_POST['todoItem'])){
     file_put_contents('data/to_do.json', $arrayEncode);
 }
 
+if(isset($_POST['remove'])){
+    array_splice($array, $_POST['remove'], 1);
+    $arrayEncode = json_encode($array);
+    file_put_contents('data/to_do.json', $arrayEncode);
+}
+
 header('Content-Type: application/json');
 echo json_encode($array);
 ?>

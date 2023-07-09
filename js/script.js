@@ -31,6 +31,16 @@ createApp({
                     this.todoList = response.data;
                 });
             }
+        },
+        deleteItem(index) {
+
+            const remove = new FormData();
+            remove.append('remove', index);
+
+            axios.post(this.apiUrl, remove).then((result) => {
+                this.todoList = result.data
+            })
+
         }
     },
 }).mount('#app');
